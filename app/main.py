@@ -39,7 +39,8 @@ async def post_devops(body: MessageIn,
     validate_api_key(x_parse_rest_api_key)
     validate_jwt(x_jwt_key)
     pod_name = os.environ.get("HOSTNAME", "unknown-pod")
-    return {"message": f"Hello {body.to} your message will be send from pod {pod_name}"}
+    return {"message": f"Hello {body.to} your message will be send"}
+    # return {"message": f"Hello {body.to} your message will be send from pod {pod_name}"}
 
 
 @app.get("/DevOps", response_class=PlainTextResponse)
