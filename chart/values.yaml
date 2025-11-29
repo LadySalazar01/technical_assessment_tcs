@@ -1,0 +1,10 @@
+replicaCount: 2
+
+image:
+  repository: devops-microservice
+  tag: latest
+  pullPolicy: Never
+
+service:
+  type: LoadBalancer
+  port: 8000
