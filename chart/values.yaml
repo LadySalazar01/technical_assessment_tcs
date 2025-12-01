@@ -11,3 +11,13 @@ service:
 
 imagePullSecret: "eyJhdXRocyI6eyJnaGNyLmlvIjp7InVzZXJuYW1lIjoibGFkeXNhbGF6YXIwMSIsInBhc3N3b3JkIjoiZ2hwX0xZSTZya3QxNTF6c3RwcWlKckxTM0FmaEE3aUlNQzN3c253RSIsImVtYWlsIjoibGFkeS4xOTk4QG91dGxvb2suY29tIiwiYXV0aCI6ImJHRmtlWE5oYkdGNllYSXdNVHBuYUhCZlRGbEpObkpyZERFMU1YcHpkSEJ4YVVweVRGTXpRV1pvUVRkcFNVMURNM2R6Ym5kRiJ9fX0="
 
+ingress:
+  enabled: true
+  className: "nginx"
+  host: devops.local
+
+hpa:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 50
