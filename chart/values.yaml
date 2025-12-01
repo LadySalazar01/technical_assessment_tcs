@@ -1,10 +1,13 @@
 replicaCount: 2
 
 image:
-  repository: devops-microservice
+  repository: ghcr.io/ladysalazar01/devops-microservice
   tag: latest
-  pullPolicy: Never
+  pullPolicy: Always
 
 service:
   type: LoadBalancer
   port: 8000
+
+imagePullSecret: "eyJhdXRocyI6eyJnaGNyLmlvIjp7InVzZXJuYW1lIjoibGFkeXNhbGF6YXIwMSIsInBhc3N3b3JkIjoiZ2hwX0xZSTZya3QxNTF6c3RwcWlKckxTM0FmaEE3aUlNQzN3c253RSIsImVtYWlsIjoibGFkeS4xOTk4QG91dGxvb2suY29tIiwiYXV0aCI6ImJHRmtlWE5oYkdGNllYSXdNVHBuYUhCZlRGbEpObkpyZERFMU1YcHpkSEJ4YVVweVRGTXpRV1pvUVRkcFNVMURNM2R6Ym5kRiJ9fX0="
+

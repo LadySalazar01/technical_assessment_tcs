@@ -18,7 +18,7 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest -q
+        pytest --cov=app --cov-report=xml
 
     - name: Log in to GHCR
       uses: docker/login-action@v3
